@@ -1,0 +1,246 @@
+{
+  "questions": [
+    {
+      "id": "purpose",
+      "question": "러닝을 하는 주요 목적은 무엇인가요?",
+      "options": [
+        {
+          "id": "health",
+          "label": "건강 관리",
+          "description": "체력 향상과 건강 유지를 위해 달려요",
+          "icon": "💪",
+          "weight": {
+            "daily": 3,
+            "super-trainer": 1,
+            "racing": 0
+          }
+        },
+        {
+          "id": "stress",
+          "label": "스트레스 해소",
+          "description": "달리면서 머리를 비우고 싶어요",
+          "icon": "🧘",
+          "weight": {
+            "daily": 3,
+            "super-trainer": 1,
+            "racing": 0
+          }
+        },
+        {
+          "id": "race",
+          "label": "대회 출전",
+          "description": "마라톤 대회에 참가하고 기록을 세우고 싶어요",
+          "icon": "🏆",
+          "weight": {
+            "daily": 1,
+            "super-trainer": 2,
+            "racing": 3
+          }
+        },
+        {
+          "id": "hobby",
+          "label": "취미 생활",
+          "description": "일상 속 즐거운 러닝을 즐기고 싶어요",
+          "icon": "🏃",
+          "weight": {
+            "daily": 2,
+            "super-trainer": 2,
+            "racing": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "distance",
+      "question": "주로 어느 정도 거리를 달리시나요?",
+      "options": [
+        {
+          "id": "short",
+          "label": "5km 이하",
+          "description": "가볍게 동네 한 바퀴 정도",
+          "icon": "🌱",
+          "weight": {
+            "beginner": 3,
+            "max-cushion": 1,
+            "lightweight-trainer": 2
+          }
+        },
+        {
+          "id": "medium",
+          "label": "5km ~ 10km",
+          "description": "적당한 거리의 조깅",
+          "icon": "🌿",
+          "weight": {
+            "beginner": 2,
+            "all-rounder": 3,
+            "lightweight-trainer": 2
+          }
+        },
+        {
+          "id": "half",
+          "label": "10km ~ 21km",
+          "description": "하프마라톤 거리까지",
+          "icon": "🌳",
+          "weight": {
+            "max-cushion": 2,
+            "non-plate": 3,
+            "half-marathon": 3
+          }
+        },
+        {
+          "id": "full",
+          "label": "21km 이상",
+          "description": "풀마라톤 거리 이상",
+          "icon": "🏔️",
+          "weight": {
+            "max-cushion": 3,
+            "carbon-plate": 2,
+            "full-marathon": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "priority",
+      "question": "러닝화에서 가장 중요하게 생각하는 것은?",
+      "options": [
+        {
+          "id": "cushion",
+          "label": "쿠셔닝",
+          "description": "푹신하고 편안한 착지감이 중요해요",
+          "icon": "☁️",
+          "weight": {
+            "max-cushion": 3,
+            "non-plate": 2
+          }
+        },
+        {
+          "id": "response",
+          "label": "반응성",
+          "description": "빠르고 탄력있는 추진력이 중요해요",
+          "icon": "⚡",
+          "weight": {
+            "lightweight-trainer": 2,
+            "carbon-plate": 3,
+            "half-marathon": 2
+          }
+        },
+        {
+          "id": "stability",
+          "label": "안정성",
+          "description": "발목 보호와 안정적인 착지가 중요해요",
+          "icon": "⚖️",
+          "weight": {
+            "stability": 3,
+            "beginner": 2
+          }
+        },
+        {
+          "id": "light",
+          "label": "가벼움",
+          "description": "가볍고 빠른 느낌이 중요해요",
+          "icon": "🪶",
+          "weight": {
+            "lightweight-trainer": 3,
+            "half-marathon": 2,
+            "full-marathon": 2
+          }
+        },
+        {
+          "id": "value",
+          "label": "가성비",
+          "description": "합리적인 가격이 중요해요",
+          "icon": "💰",
+          "weight": {
+            "beginner": 3,
+            "lightweight-trainer": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "experience",
+      "question": "러닝 경력이 어느 정도 되시나요?",
+      "options": [
+        {
+          "id": "beginner",
+          "label": "입문자",
+          "description": "러닝을 처음 시작해요 (1년 미만)",
+          "icon": "🌱",
+          "weight": {
+            "beginner": 3,
+            "stability": 2,
+            "max-cushion": 1
+          }
+        },
+        {
+          "id": "intermediate",
+          "label": "중급자",
+          "description": "꾸준히 달리고 있어요 (1-3년)",
+          "icon": "🏃",
+          "weight": {
+            "all-rounder": 2,
+            "non-plate": 2,
+            "lightweight-trainer": 2
+          }
+        },
+        {
+          "id": "advanced",
+          "label": "상급자",
+          "description": "마라톤 대회 경험이 있어요 (3년 이상)",
+          "icon": "🏅",
+          "weight": {
+            "carbon-plate": 2,
+            "half-marathon": 2,
+            "light-plate": 2
+          }
+        },
+        {
+          "id": "elite",
+          "label": "엘리트",
+          "description": "기록 경쟁을 하는 숙련 러너예요",
+          "icon": "🏆",
+          "weight": {
+            "carbon-plate": 3,
+            "half-marathon": 3,
+            "full-marathon": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "budget",
+      "question": "예산은 어느 정도를 생각하고 계신가요?",
+      "options": [
+        {
+          "id": "budget-low",
+          "label": "15만원 이하",
+          "description": "가성비 좋은 입문용",
+          "icon": "💵",
+          "priceMax": 150000
+        },
+        {
+          "id": "budget-mid",
+          "label": "15만원 ~ 22만원",
+          "description": "중급 성능의 러닝화",
+          "icon": "💵💵",
+          "priceMax": 220000
+        },
+        {
+          "id": "budget-high",
+          "label": "22만원 ~ 30만원",
+          "description": "고성능 트레이너/레이싱화",
+          "icon": "💵💵💵",
+          "priceMax": 300000
+        },
+        {
+          "id": "budget-premium",
+          "label": "30만원 이상",
+          "description": "최고급 레이싱화",
+          "icon": "💎",
+          "priceMax": 999999
+        }
+      ]
+    }
+  ]
+}

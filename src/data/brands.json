@@ -1,0 +1,35 @@
+[
+  {
+    "id": "nike",
+    "name": "Nike",
+    "nameKo": "나이키",
+    "description": "Just Do It. 40년 이상의 러닝화 혁신을 이끌어온 글로벌 스포츠 브랜드. 페가수스부터 알파플라이까지, 모든 러너를 위한 완벽한 라인업.",
+    "tagline": "Every Run Tells a Story",
+    "color": "#FA5400",
+    "secondaryColor": "#111111",
+    "logo": "/images/brands/nike-logo.svg",
+    "heroImage": "/images/brands/nike-hero.jpg"
+  },
+  {
+    "id": "adidas",
+    "name": "Adidas",
+    "nameKo": "아디다스",
+    "description": "Impossible is Nothing. Boost와 Lightstrike Pro 기술로 러닝의 새로운 기준을 제시하는 독일의 스포츠 거인.",
+    "tagline": "Run For The Oceans",
+    "color": "#000000",
+    "secondaryColor": "#1428A0",
+    "logo": "/images/brands/adidas-logo.svg",
+    "heroImage": "/images/brands/adidas-hero.jpg"
+  },
+  {
+    "id": "asics",
+    "name": "Asics",
+    "nameKo": "아식스",
+    "description": "Sound Mind, Sound Body. 일본의 장인정신으로 만든 러닝화, FF Blast+ 폼과 GEL 기술의 조화.",
+    "tagline": "I Move Me",
+    "color": "#D50032",
+    "secondaryColor": "#001E62",
+    "logo": "/images/brands/asics-logo.svg",
+    "heroImage": "/images/brands/asics-hero.jpg"
+  }
+]

@@ -1,0 +1,543 @@
+[
+  {
+    "id": "nike-pegasus-41",
+    "slug": "pegasus-41",
+    "brandId": "nike",
+    "name": "Pegasus 41",
+    "nameKo": "페가수스 41",
+    "version": "41",
+    "releaseYear": 2024,
+    "mainCategory": "daily",
+    "subCategory": "beginner",
+    "specs": {
+      "weight": 297,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 37,
+      "foreStack": 27,
+      "drop": 10,
+      "priceKRW": 179000
+    },
+    "proscons": {
+      "pros": [
+        "41년 역사의 믿음직한 국민 러닝화",
+        "ReactX 폼으로 쿠셔닝 업그레이드",
+        "에어 줌 유닛이 착지 충격 흡수",
+        "넓은 발볼에도 편안한 핏"
+      ],
+      "cons": [
+        "무게가 300g에 육박",
+        "스피드 훈련엔 조금 무거움",
+        "통기성이 아쉬운 편"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/nike/pegasus-41.webp", "type": "main" }
+    ],
+    "tagline": "41년의 헤리티지, 입문자의 국민템",
+    "description": "Nike Pegasus 41은 1983년부터 이어져 온 러닝화의 전설입니다. ReactX 폼과 에어 줌 유닛의 조합으로 부드러운 쿠셔닝과 안정적인 착지를 제공합니다. 처음 러닝을 시작하는 분부터 베테랑 러너까지, 모든 러너에게 신뢰할 수 있는 선택입니다.",
+    "reviewScore": {
+      "cushioning": 8,
+      "responsiveness": 7,
+      "stability": 7,
+      "durability": 8,
+      "fit": 8,
+      "breathability": 6,
+      "value": 8
+    }
+  },
+  {
+    "id": "nike-vomero-18",
+    "slug": "vomero-18",
+    "brandId": "nike",
+    "name": "Vomero 18",
+    "nameKo": "보메로 18",
+    "version": "18",
+    "releaseYear": 2024,
+    "mainCategory": "daily",
+    "subCategory": "max-cushion",
+    "specs": {
+      "weight": 308,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 41,
+      "foreStack": 31,
+      "drop": 10,
+      "priceKRW": 219000
+    },
+    "proscons": {
+      "pros": [
+        "ZoomX 폼의 폭신한 쿠셔닝",
+        "장거리에서도 편안한 라이드",
+        "높은 스택으로 충격흡수 극대화"
+      ],
+      "cons": [
+        "무게가 300g 초과",
+        "좁은 발볼은 불편할 수 있음",
+        "가격대가 높은 편"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/nike/vomero-18.webp", "type": "main" }
+    ],
+    "tagline": "구름 위를 달리는 맥스쿠션의 정석",
+    "description": "Nike Vomero 18은 ZoomX 폼을 풀렝스로 적용해 최고의 쿠셔닝 경험을 제공합니다. 장거리 러닝에서도 발이 피로하지 않고, 무릎과 관절을 보호해주는 맥스쿠션 러닝화의 정석입니다.",
+    "reviewScore": {
+      "cushioning": 9,
+      "responsiveness": 6,
+      "stability": 7,
+      "durability": 7,
+      "fit": 7,
+      "breathability": 7,
+      "value": 7
+    }
+  },
+  {
+    "id": "nike-vomero-plus",
+    "slug": "vomero-plus",
+    "brandId": "nike",
+    "name": "Vomero Plus",
+    "nameKo": "보메로 플러스",
+    "version": "Plus",
+    "releaseYear": 2024,
+    "mainCategory": "daily",
+    "subCategory": "max-cushion",
+    "specs": {
+      "weight": 315,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 44,
+      "foreStack": 34,
+      "drop": 10,
+      "priceKRW": 239000
+    },
+    "proscons": {
+      "pros": [
+        "보메로 라인 최고의 쿠셔닝",
+        "두꺼운 ZoomX 폼의 클라우드 라이드",
+        "리커버리 런에 최적화"
+      ],
+      "cons": [
+        "무게가 무거운 편",
+        "반응성은 기대하기 어려움",
+        "높은 스택으로 안정성 약간 감소"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/nike/vomero-plus.webp", "type": "main" }
+    ],
+    "tagline": "보메로의 쿠셔닝을 더 극대화",
+    "description": "Nike Vomero Plus는 보메로 18보다 더 두꺼운 ZoomX 폼을 적용해 극한의 쿠셔닝을 제공합니다. 리커버리 런이나 편안한 장거리 러닝에 최적의 선택입니다.",
+    "reviewScore": {
+      "cushioning": 10,
+      "responsiveness": 5,
+      "stability": 6,
+      "durability": 7,
+      "fit": 7,
+      "breathability": 7,
+      "value": 6
+    }
+  },
+  {
+    "id": "nike-vomero-premium",
+    "slug": "vomero-premium",
+    "brandId": "nike",
+    "name": "Vomero Premium",
+    "nameKo": "보메로 프리미엄",
+    "version": "Premium",
+    "releaseYear": 2024,
+    "mainCategory": "daily",
+    "subCategory": "max-cushion",
+    "specs": {
+      "weight": 320,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 45,
+      "foreStack": 35,
+      "drop": 10,
+      "priceKRW": 259000
+    },
+    "proscons": {
+      "pros": [
+        "프리미엄 소재와 마감",
+        "최상위 쿠셔닝 경험",
+        "스타일리시한 디자인"
+      ],
+      "cons": [
+        "가격대가 높음",
+        "무거운 편",
+        "레이싱용으로는 부적합"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/nike/vomero-premium.webp", "type": "main" }
+    ],
+    "tagline": "보메로의 프리미엄 에디션",
+    "description": "Nike Vomero Premium은 보메로 라인의 최상위 모델로, 프리미엄 소재와 세련된 디자인이 특징입니다. 일상에서도 스타일리시하게 신을 수 있는 맥스쿠션 러닝화입니다.",
+    "reviewScore": {
+      "cushioning": 10,
+      "responsiveness": 5,
+      "stability": 6,
+      "durability": 8,
+      "fit": 8,
+      "breathability": 7,
+      "value": 5
+    }
+  },
+  {
+    "id": "nike-structure-26",
+    "slug": "structure-26",
+    "brandId": "nike",
+    "name": "Structure 26",
+    "nameKo": "스트럭처 26",
+    "version": "26",
+    "releaseYear": 2024,
+    "mainCategory": "daily",
+    "subCategory": "stability",
+    "specs": {
+      "weight": 285,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 36,
+      "foreStack": 28,
+      "drop": 8,
+      "priceKRW": 179000
+    },
+    "proscons": {
+      "pros": [
+        "과내전 교정 지지력 우수",
+        "편안하면서도 안정적인 착지",
+        "장거리에서도 발목 보호"
+      ],
+      "cons": [
+        "뉴트럴 러너에겐 과한 지지력",
+        "약간 딱딱한 느낌",
+        "디자인이 클래식한 편"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/nike/structure-26.webp", "type": "main" }
+    ],
+    "tagline": "안정성의 대명사, 오버프로네이터의 동반자",
+    "description": "Nike Structure 26은 과내전(오버프로네이션)이 있는 러너를 위한 안정화입니다. 미드풋의 지지 구조가 발의 과도한 회전을 막아주고, 안정적인 착지를 유도합니다.",
+    "reviewScore": {
+      "cushioning": 7,
+      "responsiveness": 6,
+      "stability": 9,
+      "durability": 8,
+      "fit": 7,
+      "breathability": 7,
+      "value": 8
+    }
+  },
+  {
+    "id": "nike-structure-plus",
+    "slug": "structure-plus",
+    "brandId": "nike",
+    "name": "Structure Plus",
+    "nameKo": "스트럭처 플러스",
+    "version": "Plus",
+    "releaseYear": 2024,
+    "mainCategory": "daily",
+    "subCategory": "stability",
+    "specs": {
+      "weight": 295,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 39,
+      "foreStack": 31,
+      "drop": 8,
+      "priceKRW": 199000
+    },
+    "proscons": {
+      "pros": [
+        "향상된 쿠셔닝과 지지력",
+        "더 두꺼운 폼으로 편안함 증가",
+        "장거리 안정화로 최적"
+      ],
+      "cons": [
+        "무게가 증가",
+        "반응성은 다소 부족",
+        "가격이 상승"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/nike/structure-plus.webp", "type": "main" }
+    ],
+    "tagline": "스트럭처의 쿠셔닝 업그레이드 버전",
+    "description": "Nike Structure Plus는 스트럭처 26의 안정성에 더 두꺼운 폼을 적용해 쿠셔닝을 강화한 모델입니다. 장거리에서도 안정적이고 편안한 러닝이 가능합니다.",
+    "reviewScore": {
+      "cushioning": 8,
+      "responsiveness": 6,
+      "stability": 9,
+      "durability": 8,
+      "fit": 7,
+      "breathability": 6,
+      "value": 7
+    }
+  },
+  {
+    "id": "nike-rival-fly-4",
+    "slug": "rival-fly-4",
+    "brandId": "nike",
+    "name": "Rival Fly 4",
+    "nameKo": "라이벌 플라이 4",
+    "version": "4",
+    "releaseYear": 2024,
+    "mainCategory": "daily",
+    "subCategory": "lightweight-trainer",
+    "specs": {
+      "weight": 235,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 30,
+      "foreStack": 22,
+      "drop": 8,
+      "priceKRW": 149000
+    },
+    "proscons": {
+      "pros": [
+        "가볍고 빠른 템포런에 최적",
+        "가성비 뛰어난 경량 트레이너",
+        "반응성 좋은 폼"
+      ],
+      "cons": [
+        "쿠셔닝이 얇은 편",
+        "장거리엔 다리에 부담",
+        "내구성이 짧을 수 있음"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/nike/rival-fly-4.webp", "type": "main" }
+    ],
+    "tagline": "가볍게 질주하는 스피드 트레이너",
+    "description": "Nike Rival Fly 4는 템포런과 인터벌 훈련에 최적화된 경량 트레이너입니다. 가벼운 무게와 반응성 있는 폼으로 스피드 훈련의 즐거움을 느낄 수 있습니다.",
+    "reviewScore": {
+      "cushioning": 6,
+      "responsiveness": 8,
+      "stability": 6,
+      "durability": 6,
+      "fit": 8,
+      "breathability": 8,
+      "value": 9
+    }
+  },
+  {
+    "id": "nike-pegasus-plus",
+    "slug": "pegasus-plus",
+    "brandId": "nike",
+    "name": "Pegasus Plus",
+    "nameKo": "페가수스 플러스",
+    "version": "Plus",
+    "releaseYear": 2024,
+    "mainCategory": "super-trainer",
+    "subCategory": "non-plate",
+    "specs": {
+      "weight": 265,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 40,
+      "foreStack": 30,
+      "drop": 10,
+      "priceKRW": 229000
+    },
+    "proscons": {
+      "pros": [
+        "ZoomX 폼의 뛰어난 반응성",
+        "페가수스의 상위 버전",
+        "플레이트 없이도 빠른 라이드"
+      ],
+      "cons": [
+        "가격이 상당히 높음",
+        "내구성이 페가수스 41보다 낮음",
+        "일상 훈련용으로는 과할 수 있음"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/nike/pegasus-plus.webp", "type": "main" }
+    ],
+    "tagline": "페가수스의 ZoomX 업그레이드",
+    "description": "Nike Pegasus Plus는 페가수스 41의 안정성에 ZoomX 폼의 반응성을 더한 슈퍼트레이너입니다. 플레이트 없이도 빠른 템포런이 가능하며, 레이싱화 대용으로도 활용할 수 있습니다.",
+    "reviewScore": {
+      "cushioning": 8,
+      "responsiveness": 8,
+      "stability": 7,
+      "durability": 6,
+      "fit": 8,
+      "breathability": 7,
+      "value": 7
+    }
+  },
+  {
+    "id": "nike-zoom-fly-6",
+    "slug": "zoom-fly-6",
+    "brandId": "nike",
+    "name": "Zoom Fly 6",
+    "nameKo": "줌 플라이 6",
+    "version": "6",
+    "releaseYear": 2024,
+    "mainCategory": "super-trainer",
+    "subCategory": "carbon-plate",
+    "specs": {
+      "weight": 260,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 40,
+      "foreStack": 32,
+      "drop": 8,
+      "priceKRW": 229000
+    },
+    "proscons": {
+      "pros": [
+        "카본 플레이트로 추진력 강화",
+        "레이싱화 느낌의 훈련화",
+        "베이퍼플라이 시뮬레이션 가능"
+      ],
+      "cons": [
+        "플레이트로 인해 다리 피로 가능",
+        "데일리 트레이너로는 과함",
+        "내구성이 짧은 편"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/nike/zoom-fly-6.webp", "type": "main" }
+    ],
+    "tagline": "훈련에서 레이싱 느낌을 경험하다",
+    "description": "Nike Zoom Fly 6은 카본 플레이트가 탑재된 슈퍼트레이너입니다. 베이퍼플라이와 유사한 라이드 느낌을 훈련에서 경험할 수 있어, 레이스 준비에 최적입니다.",
+    "reviewScore": {
+      "cushioning": 7,
+      "responsiveness": 9,
+      "stability": 6,
+      "durability": 5,
+      "fit": 7,
+      "breathability": 7,
+      "value": 7
+    }
+  },
+  {
+    "id": "nike-streakfly-2",
+    "slug": "streakfly-2",
+    "brandId": "nike",
+    "name": "Streakfly 2",
+    "nameKo": "스트릭플라이 2",
+    "version": "2",
+    "releaseYear": 2024,
+    "mainCategory": "racing",
+    "subCategory": "half-marathon",
+    "specs": {
+      "weight": 190,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 32,
+      "foreStack": 26,
+      "drop": 6,
+      "priceKRW": 219000
+    },
+    "proscons": {
+      "pros": [
+        "초경량으로 빠른 5K/10K에 최적",
+        "지면 반응이 빠른 로우 스택",
+        "가성비 좋은 레이싱화"
+      ],
+      "cons": [
+        "쿠셔닝이 얇아 풀 마라톤엔 부담",
+        "내구성이 짧음",
+        "초보자에겐 어려울 수 있음"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/nike/streakfly-2.webp", "type": "main" }
+    ],
+    "tagline": "짧은 거리의 스피드 킬러",
+    "description": "Nike Streakfly 2는 5K와 10K 레이스에 특화된 초경량 레이싱화입니다. 낮은 스택 하이트로 지면 반응이 빠르고, 빠른 피치의 러닝에 최적화되어 있습니다.",
+    "reviewScore": {
+      "cushioning": 5,
+      "responsiveness": 9,
+      "stability": 5,
+      "durability": 4,
+      "fit": 8,
+      "breathability": 9,
+      "value": 7
+    }
+  },
+  {
+    "id": "nike-vaporfly-4",
+    "slug": "vaporfly-4",
+    "brandId": "nike",
+    "name": "Vaporfly 4",
+    "nameKo": "베이퍼플라이 4",
+    "version": "4",
+    "releaseYear": 2024,
+    "mainCategory": "racing",
+    "subCategory": "half-marathon",
+    "specs": {
+      "weight": 195,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 40,
+      "foreStack": 32,
+      "drop": 8,
+      "priceKRW": 319000
+    },
+    "proscons": {
+      "pros": [
+        "러닝화 역사를 바꾼 전설",
+        "ZoomX와 카본의 완벽한 조화",
+        "하프마라톤 기록 갱신의 열쇠"
+      ],
+      "cons": [
+        "높은 가격대",
+        "내구성이 300km 정도",
+        "좁은 발볼에는 불편할 수 있음"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/nike/vaporfly-4.webp", "type": "main" }
+    ],
+    "tagline": "기록을 깨는 것은 당신의 몫",
+    "description": "Nike Vaporfly 4는 마라톤 역사를 바꾼 혁신적인 레이싱화입니다. ZoomX 폼과 풀렝스 카본 플레이트의 조합으로 놀라운 에너지 리턴을 제공합니다.",
+    "reviewScore": {
+      "cushioning": 8,
+      "responsiveness": 10,
+      "stability": 6,
+      "durability": 4,
+      "fit": 7,
+      "breathability": 8,
+      "value": 6
+    }
+  },
+  {
+    "id": "nike-alphafly-3",
+    "slug": "alphafly-3",
+    "brandId": "nike",
+    "name": "Alphafly 3",
+    "nameKo": "알파플라이 3",
+    "version": "3",
+    "releaseYear": 2024,
+    "mainCategory": "racing",
+    "subCategory": "full-marathon",
+    "specs": {
+      "weight": 212,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 40,
+      "foreStack": 36,
+      "drop": 4,
+      "priceKRW": 359000
+    },
+    "proscons": {
+      "pros": [
+        "풀마라톤 세계기록 러닝화",
+        "최대의 에너지 리턴",
+        "2개의 에어팟으로 추진력 극대화"
+      ],
+      "cons": [
+        "매우 높은 가격",
+        "낮은 드롭으로 적응 필요",
+        "내구성이 짧음 (200-300km)"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/nike/alphafly-3.webp", "type": "main" }
+    ],
+    "tagline": "세계 기록을 위한 궁극의 무기",
+    "description": "Nike Alphafly 3은 풀마라톤 세계기록을 수립한 궁극의 레이싱화입니다. ZoomX 폼, 카본 플레이트, 그리고 에어 유닛의 조합으로 인류 최고의 마라톤 기록을 향해 나아갑니다.",
+    "reviewScore": {
+      "cushioning": 9,
+      "responsiveness": 10,
+      "stability": 5,
+      "durability": 3,
+      "fit": 7,
+      "breathability": 7,
+      "value": 5
+    }
+  }
+]

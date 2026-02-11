@@ -1,0 +1,104 @@
+{
+  "main": [
+    {
+      "id": "daily",
+      "name": "Daily Trainer",
+      "nameKo": "데일리 트레이너",
+      "description": "매일매일 신을 수 있는 편안한 훈련용 러닝화",
+      "icon": "🏃",
+      "color": "#3B82F6",
+      "subCategories": [
+        {
+          "id": "beginner",
+          "name": "Beginner",
+          "nameKo": "입문화",
+          "description": "러닝을 시작하는 분들을 위한 편안하고 안정적인 선택",
+          "icon": "🌱"
+        },
+        {
+          "id": "max-cushion",
+          "name": "Max Cushion",
+          "nameKo": "맥스쿠션화",
+          "description": "최대의 충격흡수로 관절을 보호하는 쿠션 특화 러닝화",
+          "icon": "☁️"
+        },
+        {
+          "id": "stability",
+          "name": "Stability",
+          "nameKo": "안정화",
+          "description": "과내전(오버프로네이션)을 교정하는 지지력 강화 러닝화",
+          "icon": "⚖️"
+        },
+        {
+          "id": "all-rounder",
+          "name": "All-Rounder",
+          "nameKo": "올라운더",
+          "description": "쿠션, 반응성, 안정성 모두 갖춘 만능 데일리 트레이너",
+          "icon": "🎯"
+        },
+        {
+          "id": "lightweight-trainer",
+          "name": "Lightweight Trainer",
+          "nameKo": "경량트레이너",
+          "description": "가벼운 템포런과 인터벌 훈련에 적합한 경량 트레이너",
+          "icon": "🪶"
+        }
+      ]
+    },
+    {
+      "id": "super-trainer",
+      "name": "Super Trainer",
+      "nameKo": "슈퍼트레이너",
+      "description": "레이싱과 훈련 사이, 고성능 트레이닝을 위한 러닝화",
+      "icon": "⚡",
+      "color": "#8B5CF6",
+      "subCategories": [
+        {
+          "id": "non-plate",
+          "name": "Non-Plate",
+          "nameKo": "논플레이트",
+          "description": "플레이트 없이 폼만으로 뛰어난 반응성을 제공",
+          "icon": "💨"
+        },
+        {
+          "id": "light-plate",
+          "name": "Light Plate",
+          "nameKo": "라이트플레이트",
+          "description": "가벼운 플레이트로 추진력을 더한 하이브리드 트레이너",
+          "icon": "🔋"
+        },
+        {
+          "id": "carbon-plate",
+          "name": "Carbon Plate",
+          "nameKo": "카본플레이트",
+          "description": "카본 플레이트로 레이싱급 반응성을 훈련에서 경험",
+          "icon": "⚡"
+        }
+      ]
+    },
+    {
+      "id": "racing",
+      "name": "Racing",
+      "nameKo": "레이싱",
+      "description": "대회와 기록 갱신을 위한 최고의 레이싱 러닝화",
+      "icon": "🏆",
+      "color": "#EF4444",
+      "subCategories": [
+        {
+          "id": "half-marathon",
+          "name": "Half Marathon",
+          "nameKo": "하프마라톤",
+          "description": "하프마라톤과 10K 레이스에 최적화된 레이싱화",
+          "icon": "🥈"
+        },
+        {
+          "id": "full-marathon",
+          "name": "Full Marathon",
+          "nameKo": "풀마라톤",
+          "description": "풀마라톤을 위한 최고의 레이싱 머신",
+          "icon": "🥇"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a1a"/>
+  <g fill="#333">
+    <ellipse cx="200" cy="180" rx="120" ry="40"/>
+    <path d="M80 180 Q 80 120 200 100 Q 320 80 320 140 L 320 180 Z"/>
+  </g>
+  <text x="200" y="250" text-anchor="middle" fill="#555" font-family="Arial" font-size="14">Running Shoe</text>
+</svg>

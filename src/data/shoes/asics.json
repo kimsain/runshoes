@@ -1,0 +1,632 @@
+[
+  {
+    "id": "asics-gel-cumulus-27",
+    "slug": "gel-cumulus-27",
+    "brandId": "asics",
+    "name": "Gel-Cumulus 27",
+    "nameKo": "젤 큐물러스 27",
+    "version": "27",
+    "releaseYear": 2024,
+    "mainCategory": "daily",
+    "subCategory": "beginner",
+    "specs": {
+      "weight": 285,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 37,
+      "foreStack": 27,
+      "drop": 10,
+      "priceKRW": 169000
+    },
+    "proscons": {
+      "pros": [
+        "FF Blast+ 폼의 부드러운 쿠셔닝",
+        "27년 역사의 검증된 입문화",
+        "GEL 기술로 충격흡수 우수"
+      ],
+      "cons": [
+        "무게가 다소 있는 편",
+        "반응성은 평이함",
+        "디자인이 클래식한 편"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/asics/gel-cumulus-27.webp", "type": "main" }
+    ],
+    "tagline": "27년의 신뢰, 입문자의 동반자",
+    "description": "Asics Gel-Cumulus 27은 27년간 전 세계 러너들의 사랑을 받아온 입문화입니다. FF Blast+ 폼과 GEL 기술의 조합으로 편안한 쿠셔닝을 제공합니다.",
+    "reviewScore": {
+      "cushioning": 8,
+      "responsiveness": 6,
+      "stability": 8,
+      "durability": 9,
+      "fit": 8,
+      "breathability": 7,
+      "value": 9
+    }
+  },
+  {
+    "id": "asics-gel-nimbus-28",
+    "slug": "gel-nimbus-28",
+    "brandId": "asics",
+    "name": "Gel-Nimbus 28",
+    "nameKo": "젤님버스 28",
+    "version": "28",
+    "releaseYear": 2024,
+    "mainCategory": "daily",
+    "subCategory": "max-cushion",
+    "specs": {
+      "weight": 295,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 41,
+      "foreStack": 33,
+      "drop": 8,
+      "priceKRW": 219000
+    },
+    "proscons": {
+      "pros": [
+        "FF Blast+ Eco 폼의 구름같은 쿠셔닝",
+        "PureGEL로 부드러운 착지",
+        "장거리에서도 편안함 유지"
+      ],
+      "cons": [
+        "무게가 다소 있음",
+        "반응성은 기대하기 어려움",
+        "가격대가 높은 편"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/asics/gel-nimbus-28.webp", "type": "main" }
+    ],
+    "tagline": "맥스쿠션의 정석, 님버스",
+    "description": "Asics Gel-Nimbus 28은 아식스의 대표 맥스쿠션 러닝화입니다. FF Blast+ Eco 폼과 PureGEL이 최고의 쿠셔닝 경험을 선사합니다.",
+    "reviewScore": {
+      "cushioning": 10,
+      "responsiveness": 6,
+      "stability": 7,
+      "durability": 8,
+      "fit": 8,
+      "breathability": 7,
+      "value": 7
+    }
+  },
+  {
+    "id": "asics-glideride-max-2",
+    "slug": "glideride-max-2",
+    "brandId": "asics",
+    "name": "Glideride Max 2",
+    "nameKo": "글라이드라이드맥스 2",
+    "version": "2",
+    "releaseYear": 2024,
+    "mainCategory": "daily",
+    "subCategory": "max-cushion",
+    "specs": {
+      "weight": 305,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 43,
+      "foreStack": 38,
+      "drop": 5,
+      "priceKRW": 229000
+    },
+    "proscons": {
+      "pros": [
+        "로커 구조로 에너지 절약",
+        "FF Blast+ 폼의 맥스쿠션",
+        "울트라 러닝에 적합"
+      ],
+      "cons": [
+        "무거운 무게",
+        "낮은 드롭 적응 필요",
+        "일반 훈련용으로는 과함"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/asics/glideride-max-2.webp", "type": "main" }
+    ],
+    "tagline": "에너지를 절약하는 글라이드",
+    "description": "Asics Glideride Max 2는 로커 기술로 에너지 효율을 높인 맥스쿠션 러닝화입니다. 장거리에서 발의 피로를 줄이고 자연스러운 전진 추진력을 제공합니다.",
+    "reviewScore": {
+      "cushioning": 9,
+      "responsiveness": 6,
+      "stability": 7,
+      "durability": 8,
+      "fit": 7,
+      "breathability": 7,
+      "value": 7
+    }
+  },
+  {
+    "id": "asics-gel-kayano-32",
+    "slug": "gel-kayano-32",
+    "brandId": "asics",
+    "name": "Gel-Kayano 32",
+    "nameKo": "젤카야노 32",
+    "version": "32",
+    "releaseYear": 2024,
+    "mainCategory": "daily",
+    "subCategory": "stability",
+    "specs": {
+      "weight": 305,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 40,
+      "foreStack": 30,
+      "drop": 10,
+      "priceKRW": 239000
+    },
+    "proscons": {
+      "pros": [
+        "4D Guidance System으로 안정성 극대화",
+        "32년 역사의 안정화 대명사",
+        "과내전 교정 효과 뛰어남"
+      ],
+      "cons": [
+        "무게가 300g 초과",
+        "가격대가 높음",
+        "뉴트럴 러너에겐 과한 지지력"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/asics/gel-kayano-32.webp", "type": "main" }
+    ],
+    "tagline": "32년의 안정성, 카야노",
+    "description": "Asics Gel-Kayano 32는 32년간 안정화의 대명사로 자리잡은 러닝화입니다. 4D Guidance System이 과내전을 교정하고, FF Blast+ Eco 폼이 편안한 쿠셔닝을 제공합니다.",
+    "reviewScore": {
+      "cushioning": 8,
+      "responsiveness": 6,
+      "stability": 10,
+      "durability": 9,
+      "fit": 8,
+      "breathability": 7,
+      "value": 7
+    }
+  },
+  {
+    "id": "asics-novablast-5",
+    "slug": "novablast-5",
+    "brandId": "asics",
+    "name": "Novablast 5",
+    "nameKo": "노바블라스트 5",
+    "version": "5",
+    "releaseYear": 2024,
+    "mainCategory": "daily",
+    "subCategory": "all-rounder",
+    "specs": {
+      "weight": 260,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 41,
+      "foreStack": 33,
+      "drop": 8,
+      "priceKRW": 189000
+    },
+    "proscons": {
+      "pros": [
+        "FF Blast+ 폼의 통통 튀는 반응성",
+        "쿠셔닝과 반응성의 균형",
+        "재미있는 라이드 경험"
+      ],
+      "cons": [
+        "안정성이 다소 부족",
+        "높은 스택으로 적응 필요",
+        "바운시함이 과할 수 있음"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/asics/novablast-5.webp", "type": "main" }
+    ],
+    "tagline": "통통 튀는 재미, 노바블라스트",
+    "description": "Asics Novablast 5는 FF Blast+ 폼의 통통 튀는 반응성이 특징인 올라운더입니다. 매일 신어도 재미있고, 다양한 훈련에 활용할 수 있습니다.",
+    "reviewScore": {
+      "cushioning": 8,
+      "responsiveness": 8,
+      "stability": 6,
+      "durability": 7,
+      "fit": 8,
+      "breathability": 7,
+      "value": 8
+    }
+  },
+  {
+    "id": "asics-evoride-speed-3",
+    "slug": "evoride-speed-3",
+    "brandId": "asics",
+    "name": "Evoride Speed 3",
+    "nameKo": "에보라이드 스피드 3",
+    "version": "3",
+    "releaseYear": 2024,
+    "mainCategory": "daily",
+    "subCategory": "lightweight-trainer",
+    "specs": {
+      "weight": 225,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 33,
+      "foreStack": 28,
+      "drop": 5,
+      "priceKRW": 179000
+    },
+    "proscons": {
+      "pros": [
+        "가벼운 무게로 템포런에 최적",
+        "로커 구조로 자연스러운 추진",
+        "가성비 좋은 경량 트레이너"
+      ],
+      "cons": [
+        "쿠셔닝이 얇은 편",
+        "장거리엔 부담",
+        "안정성 약간 부족"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/asics/evoride-speed-3.webp", "type": "main" }
+    ],
+    "tagline": "가볍게 스피드를 올려라",
+    "description": "Asics Evoride Speed 3은 템포런과 인터벌 훈련에 최적화된 경량 트레이너입니다. 로커 기술로 자연스러운 전진 추진력을 제공합니다.",
+    "reviewScore": {
+      "cushioning": 6,
+      "responsiveness": 8,
+      "stability": 6,
+      "durability": 7,
+      "fit": 8,
+      "breathability": 8,
+      "value": 8
+    }
+  },
+  {
+    "id": "asics-superblast-2",
+    "slug": "superblast-2",
+    "brandId": "asics",
+    "name": "Superblast 2",
+    "nameKo": "슈퍼블라스트 2",
+    "version": "2",
+    "releaseYear": 2024,
+    "mainCategory": "super-trainer",
+    "subCategory": "non-plate",
+    "specs": {
+      "weight": 245,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 45,
+      "foreStack": 40,
+      "drop": 5,
+      "priceKRW": 249000
+    },
+    "proscons": {
+      "pros": [
+        "FF Turbo 폼의 폭발적인 반응성",
+        "플레이트 없이도 레이싱급 성능",
+        "높은 스택의 맥스쿠션 + 반응성"
+      ],
+      "cons": [
+        "높은 가격대",
+        "내구성이 짧은 편",
+        "높은 스택 적응 필요"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/asics/superblast-2.webp", "type": "main" }
+    ],
+    "tagline": "플레이트 없는 폭발력",
+    "description": "Asics Superblast 2는 플레이트 없이 폼만으로 폭발적인 반응성을 제공하는 슈퍼트레이너입니다. FF Turbo 폼이 레이싱화급 성능을 훈련에서 경험하게 합니다.",
+    "reviewScore": {
+      "cushioning": 9,
+      "responsiveness": 9,
+      "stability": 5,
+      "durability": 5,
+      "fit": 7,
+      "breathability": 7,
+      "value": 7
+    }
+  },
+  {
+    "id": "asics-megablast",
+    "slug": "megablast",
+    "brandId": "asics",
+    "name": "Megablast",
+    "nameKo": "메가블라스트",
+    "version": "1",
+    "releaseYear": 2024,
+    "mainCategory": "super-trainer",
+    "subCategory": "non-plate",
+    "specs": {
+      "weight": 255,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 47,
+      "foreStack": 42,
+      "drop": 5,
+      "priceKRW": 269000
+    },
+    "proscons": {
+      "pros": [
+        "슈퍼블라스트보다 더 두꺼운 스택",
+        "극한의 쿠셔닝 + 반응성",
+        "장거리 슈퍼트레이너"
+      ],
+      "cons": [
+        "높은 스택으로 안정성 감소",
+        "가격대가 높음",
+        "적응 기간 필요"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/asics/megablast.webp", "type": "main" }
+    ],
+    "tagline": "슈퍼블라스트의 형님",
+    "description": "Asics Megablast는 슈퍼블라스트보다 더 두꺼운 스택을 적용한 맥스쿠션 슈퍼트레이너입니다. 장거리 훈련에서 쿠셔닝과 반응성 모두 놓치지 않습니다.",
+    "reviewScore": {
+      "cushioning": 10,
+      "responsiveness": 8,
+      "stability": 5,
+      "durability": 5,
+      "fit": 7,
+      "breathability": 7,
+      "value": 6
+    }
+  },
+  {
+    "id": "asics-sonicblast",
+    "slug": "sonicblast",
+    "brandId": "asics",
+    "name": "Sonicblast",
+    "nameKo": "소닉블라스트",
+    "version": "1",
+    "releaseYear": 2024,
+    "mainCategory": "super-trainer",
+    "subCategory": "light-plate",
+    "specs": {
+      "weight": 238,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 42,
+      "foreStack": 37,
+      "drop": 5,
+      "priceKRW": 239000
+    },
+    "proscons": {
+      "pros": [
+        "라이트플레이트로 추진력 강화",
+        "FF Turbo 폼의 반응성",
+        "훈련과 레이싱 경계의 슈퍼트레이너"
+      ],
+      "cons": [
+        "플레이트 적응 필요",
+        "높은 가격대",
+        "데일리 트레이너로는 과함"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/asics/sonicblast.webp", "type": "main" }
+    ],
+    "tagline": "소닉 스피드의 블라스트",
+    "description": "Asics Sonicblast는 라이트플레이트가 탑재된 슈퍼트레이너입니다. FF Turbo 폼과 플레이트의 조합으로 훈련에서 레이싱 느낌을 경험할 수 있습니다.",
+    "reviewScore": {
+      "cushioning": 8,
+      "responsiveness": 9,
+      "stability": 6,
+      "durability": 6,
+      "fit": 7,
+      "breathability": 7,
+      "value": 7
+    }
+  },
+  {
+    "id": "asics-magic-speed-5",
+    "slug": "magic-speed-5",
+    "brandId": "asics",
+    "name": "Magic Speed 5",
+    "nameKo": "매직스피드 5",
+    "version": "5",
+    "releaseYear": 2024,
+    "mainCategory": "super-trainer",
+    "subCategory": "carbon-plate",
+    "specs": {
+      "weight": 235,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 38,
+      "foreStack": 33,
+      "drop": 5,
+      "priceKRW": 229000
+    },
+    "proscons": {
+      "pros": [
+        "카본 플레이트로 레이싱급 추진력",
+        "메타스피드 시뮬레이션 가능",
+        "가성비 좋은 카본 트레이너"
+      ],
+      "cons": [
+        "쿠셔닝이 레이싱화처럼 얇음",
+        "데일리 트레이너로는 과함",
+        "다리에 부담 가능"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/asics/magic-speed-5.webp", "type": "main" }
+    ],
+    "tagline": "마법 같은 스피드",
+    "description": "Asics Magic Speed 5는 카본 플레이트가 탑재된 슈퍼트레이너입니다. 메타스피드 레이싱화와 유사한 라이드 느낌을 훈련에서 경험할 수 있습니다.",
+    "reviewScore": {
+      "cushioning": 6,
+      "responsiveness": 9,
+      "stability": 6,
+      "durability": 5,
+      "fit": 8,
+      "breathability": 7,
+      "value": 8
+    }
+  },
+  {
+    "id": "asics-metaspeed-lei",
+    "slug": "metaspeed-lei",
+    "brandId": "asics",
+    "name": "Metaspeed Lei",
+    "nameKo": "메타스피드 레이",
+    "version": "1",
+    "releaseYear": 2024,
+    "mainCategory": "racing",
+    "subCategory": "half-marathon",
+    "specs": {
+      "weight": 180,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 33,
+      "foreStack": 28,
+      "drop": 5,
+      "priceKRW": 289000
+    },
+    "proscons": {
+      "pros": [
+        "초경량으로 5K/10K/하프에 최적",
+        "지면 반응이 빠른 로우 스택",
+        "아식스의 스피드 레이싱화"
+      ],
+      "cons": [
+        "쿠셔닝이 매우 얇음",
+        "풀마라톤에는 부담",
+        "초보자에겐 어려움"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/asics/metaspeed-lei.webp", "type": "main" }
+    ],
+    "tagline": "번개처럼 빠른 레이",
+    "description": "Asics Metaspeed Lei는 짧은 거리 레이스에 특화된 초경량 레이싱화입니다. 낮은 스택으로 지면 반응이 빠르고, 5K부터 하프마라톤까지 빠른 기록을 노릴 수 있습니다.",
+    "reviewScore": {
+      "cushioning": 5,
+      "responsiveness": 9,
+      "stability": 5,
+      "durability": 4,
+      "fit": 8,
+      "breathability": 9,
+      "value": 7
+    }
+  },
+  {
+    "id": "asics-s4-plus",
+    "slug": "s4-plus",
+    "brandId": "asics",
+    "name": "S4+",
+    "nameKo": "요기리 S4+",
+    "version": "1",
+    "releaseYear": 2024,
+    "mainCategory": "racing",
+    "subCategory": "full-marathon",
+    "specs": {
+      "weight": 175,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 39,
+      "foreStack": 34,
+      "drop": 5,
+      "priceKRW": 350000
+    },
+    "proscons": {
+      "pros": [
+        "아식스 최경량 풀마라톤화",
+        "세계 신기록 경신의 파트너",
+        "FF Turbo Plus 폼의 극한 반응성"
+      ],
+      "cons": [
+        "매우 높은 가격",
+        "내구성이 짧음",
+        "한정 판매"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/asics/s4-plus.webp", "type": "main" }
+    ],
+    "tagline": "세계 기록을 위한 무기",
+    "description": "Asics S4+ (요기리)는 풀마라톤 세계 기록을 수립한 엘리트 레이싱화입니다. 175g의 초경량 설계와 FF Turbo Plus 폼이 최고의 성능을 제공합니다.",
+    "reviewScore": {
+      "cushioning": 7,
+      "responsiveness": 10,
+      "stability": 5,
+      "durability": 3,
+      "fit": 8,
+      "breathability": 8,
+      "value": 5
+    }
+  },
+  {
+    "id": "asics-metaspeed-sky-tokyo",
+    "slug": "metaspeed-sky-tokyo",
+    "brandId": "asics",
+    "name": "Metaspeed Sky Tokyo",
+    "nameKo": "메타스피드 스카이 도쿄",
+    "version": "Tokyo",
+    "releaseYear": 2024,
+    "mainCategory": "racing",
+    "subCategory": "full-marathon",
+    "specs": {
+      "weight": 195,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 40,
+      "foreStack": 35,
+      "drop": 5,
+      "priceKRW": 319000
+    },
+    "proscons": {
+      "pros": [
+        "스트라이드형 러너를 위한 설계",
+        "두꺼운 쿠셔닝의 풀마라톤화",
+        "도쿄 특별 에디션"
+      ],
+      "cons": [
+        "높은 가격대",
+        "케이던스형 러너에겐 부적합",
+        "내구성이 짧음"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/asics/metaspeed-sky-tokyo.webp", "type": "main" }
+    ],
+    "tagline": "하늘을 향한 스트라이드",
+    "description": "Asics Metaspeed Sky Tokyo는 스트라이드형 러너를 위한 풀마라톤 레이싱화입니다. 두꺼운 쿠셔닝과 카본 플레이트가 긴 보폭의 효율을 극대화합니다.",
+    "reviewScore": {
+      "cushioning": 8,
+      "responsiveness": 9,
+      "stability": 5,
+      "durability": 4,
+      "fit": 8,
+      "breathability": 7,
+      "value": 6
+    }
+  },
+  {
+    "id": "asics-metaspeed-edge-tokyo",
+    "slug": "metaspeed-edge-tokyo",
+    "brandId": "asics",
+    "name": "Metaspeed Edge Tokyo",
+    "nameKo": "메타스피드 엣지 도쿄",
+    "version": "Tokyo",
+    "releaseYear": 2024,
+    "mainCategory": "racing",
+    "subCategory": "full-marathon",
+    "specs": {
+      "weight": 190,
+      "weightSize": "US 9 (270mm)",
+      "heelStack": 37,
+      "foreStack": 32,
+      "drop": 5,
+      "priceKRW": 319000
+    },
+    "proscons": {
+      "pros": [
+        "케이던스형 러너를 위한 설계",
+        "빠른 피치의 효율 극대화",
+        "도쿄 특별 에디션"
+      ],
+      "cons": [
+        "높은 가격대",
+        "스트라이드형 러너에겐 부적합",
+        "내구성이 짧음"
+      ]
+    },
+    "images": [
+      { "url": "/images/shoes/asics/metaspeed-edge-tokyo.webp", "type": "main" }
+    ],
+    "tagline": "날카로운 엣지의 케이던스",
+    "description": "Asics Metaspeed Edge Tokyo는 케이던스형 러너를 위한 풀마라톤 레이싱화입니다. 빠른 피치에서 에너지 효율을 극대화하는 설계가 특징입니다.",
+    "reviewScore": {
+      "cushioning": 7,
+      "responsiveness": 9,
+      "stability": 6,
+      "durability": 4,
+      "fit": 8,
+      "breathability": 8,
+      "value": 6
+    }
+  }
+]
