@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 export default function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false);
@@ -55,11 +56,17 @@ export default function CustomCursor() {
     };
   }, [cursorX, cursorY]);
 
+  const baseCursorStyles = cn(
+    'fixed top-0 left-0',
+    'pointer-events-none',
+    'hidden md:block'
+  );
+
   return (
     <>
       {/* Main cursor */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference hidden md:block"
+        className={cn(baseCursorStyles, 'z-[9999] mix-blend-difference')}
         style={{
           x: cursorXSpring,
           y: cursorYSpring,
@@ -82,7 +89,7 @@ export default function CustomCursor() {
 
       {/* Trailing dot */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-[9998] hidden md:block"
+        className={cn(baseCursorStyles, 'z-[9998]')}
         style={{
           x: cursorX,
           y: cursorY,

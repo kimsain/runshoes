@@ -37,7 +37,7 @@ export default function SubCategoryPageClient({
   const brands = Array.from(new Set(shoes.map((s) => s.brandId)));
 
   return (
-    <div className="min-h-screen bg-black pt-24">
+    <div className="min-h-screen bg-black pt-24 pb-20">
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center gap-2 text-sm text-gray-500">
@@ -59,13 +59,13 @@ export default function SubCategoryPageClient({
       {/* Hero Section */}
       <section className="relative py-16 overflow-hidden">
         <div
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 z-0 opacity-20"
           style={{
             background: `radial-gradient(circle at 50% 50%, ${mainCategory.color}40, transparent 70%)`,
           }}
         />
 
-        <div className="relative max-w-7xl mx-auto px-6">
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

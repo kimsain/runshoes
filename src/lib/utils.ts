@@ -1,4 +1,10 @@
 import { Shoe, MainCategory, SubCategory, BrandId } from '@/types';
+import { twMerge } from 'tailwind-merge';
+import { clsx, type ClassValue } from 'clsx';
+
+export function cn(...inputs: ClassValue[]): string {
+  return twMerge(clsx(inputs));
+}
 
 export function formatPrice(price: number): string {
   return new Intl.NumberFormat('ko-KR').format(price) + '원';
@@ -78,8 +84,4 @@ export function getScoreLabel(score: number): string {
   if (score >= 7) return '좋음';
   if (score >= 6) return '보통';
   return '미흡';
-}
-
-export function cn(...classes: (string | undefined | null | false)[]): string {
-  return classes.filter(Boolean).join(' ');
 }

@@ -1,11 +1,54 @@
 @import "tailwindcss";
 
+/* ============================================
+   CSS Variables
+   ============================================ */
 :root {
+  /* Background & Foreground */
   --background: #0a0a0a;
   --foreground: #ededed;
+
+  /* Brand Colors */
   --accent-nike: #FA5400;
   --accent-adidas: #1428A0;
   --accent-asics: #D50032;
+
+  /* Category Colors */
+  --category-daily: #3B82F6;
+  --category-super-trainer: #8B5CF6;
+  --category-racing: #EF4444;
+
+  /* Neutral Colors */
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e5e5;
+  --neutral-300: #d4d4d4;
+  --neutral-400: #a3a3a3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms;
+  --transition-normal: 300ms;
+  --transition-slow: 500ms;
 }
 
 @theme inline {
@@ -15,6 +58,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* ============================================
+   Base Styles
+   ============================================ */
 * {
   margin: 0;
   padding: 0;
@@ -30,59 +76,57 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom scrollbar */
+/* ============================================
+   Custom Scrollbar
+   ============================================ */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: var(--neutral-900);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 4px;
+  background: var(--neutral-700);
+  border-radius: var(--radius-full);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #444;
+  background: var(--neutral-600);
 }
 
-/* Selection */
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--neutral-700) var(--neutral-900);
+}
+
+/* ============================================
+   Selection Styles
+   ============================================ */
 ::selection {
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
 
-/* Hide cursor when custom cursor is active */
-.custom-cursor-active * {
-  cursor: none !important;
+::-moz-selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 
-/* Smooth page transitions */
-.page-transition-enter {
-  opacity: 0;
-  transform: translateY(20px);
-}
+/* ============================================
+   Utility Classes
+   ============================================ */
 
-.page-transition-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.page-transition-exit {
-  opacity: 1;
-}
-
-.page-transition-exit-active {
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-/* Gradient text animation */
+/* Gradient Text Animation */
 @keyframes gradient-shift {
   0%, 100% {
     background-position: 0% 50%;
@@ -93,7 +137,13 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #FA5400, #1428A0, #D50032, #FA5400);
+  background: linear-gradient(
+    135deg,
+    var(--accent-nike),
+    var(--accent-adidas),
+    var(--accent-asics),
+    var(--accent-nike)
+  );
   background-size: 300% 300%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -101,29 +151,127 @@ body {
   animation: gradient-shift 8s ease infinite;
 }
 
-/* Glow effects */
-.glow-nike {
-  box-shadow: 0 0 30px rgba(250, 84, 0, 0.3);
+.gradient-text-static {
+  background: linear-gradient(
+    135deg,
+    var(--accent-nike),
+    var(--accent-adidas),
+    var(--accent-asics)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.glow-adidas {
-  box-shadow: 0 0 30px rgba(20, 40, 160, 0.3);
+/* Brand Gradient Backgrounds */
+.bg-gradient-nike {
+  background: linear-gradient(135deg, var(--accent-nike), #ff7a33);
 }
 
-.glow-asics {
-  box-shadow: 0 0 30px rgba(213, 0, 50, 0.3);
+.bg-gradient-adidas {
+  background: linear-gradient(135deg, var(--accent-adidas), #3b5bdb);
 }
 
-/* Card hover effects */
+.bg-gradient-asics {
+  background: linear-gradient(135deg, var(--accent-asics), #ff4d6d);
+}
+
+/* Card Hover Effect */
 .card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform var(--transition-normal) ease,
+              box-shadow var(--transition-normal) ease;
 }
 
 .card-hover:hover {
   transform: translateY(-8px);
 }
 
-/* Marquee animation */
+/* Loading Skeleton */
+@keyframes skeleton-pulse {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--neutral-900) 25%,
+    var(--neutral-800) 50%,
+    var(--neutral-900) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Focus visible styles */
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   Layout Helpers
+   ============================================ */
+
+/* Shoe image container for proper sizing */
+.shoe-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Section isolation for proper stacking */
+section {
+  isolation: isolate;
+}
+
+/* Motion safe styles */
+.motion-safe {
+  transform-style: flat;
+}
+
+/* Custom cursor active state */
+.custom-cursor-active {
+  cursor: none;
+}
+
+.custom-cursor-active a,
+.custom-cursor-active button,
+.custom-cursor-active [role="button"] {
+  cursor: none;
+}
+
+/* ============================================
+   Animation Helpers
+   ============================================ */
+
+/* Marquee animation (CSS fallback) */
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -137,50 +285,59 @@ body {
   animation: marquee 30s linear infinite;
 }
 
-/* Text reveal animation */
-@keyframes text-reveal {
-  0% {
+.animate-marquee-slow {
+  animation: marquee 50s linear infinite;
+}
+
+.animate-marquee-fast {
+  animation: marquee 15s linear infinite;
+}
+
+/* Fade in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+/* Slide up animation */
+@keyframes slide-up {
+  from {
     opacity: 0;
     transform: translateY(20px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.text-reveal {
-  animation: text-reveal 0.6s ease forwards;
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out;
 }
 
-/* Pulse animation */
-@keyframes pulse-glow {
-  0%, 100% {
-    opacity: 0.6;
-    transform: scale(1);
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-}
 
-.pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-
-/* Loading skeleton */
-@keyframes skeleton {
-  0% {
-    background-position: -200% 0;
+  html {
+    scroll-behavior: auto;
   }
-  100% {
-    background-position: 200% 0;
-  }
-}
 
-.skeleton {
-  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
-  background-size: 200% 100%;
-  animation: skeleton 1.5s infinite;
+  .gradient-text {
+    animation: none;
+  }
 }

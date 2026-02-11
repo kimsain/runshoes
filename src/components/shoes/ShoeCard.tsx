@@ -32,11 +32,12 @@ export default function ShoeCard({ shoe, index = 0 }: ShoeCardProps) {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1, duration: 0.4 }}
+      className="h-full"
     >
-      <Link href={`/shoe/${shoe.slug}`}>
+      <Link href={`/shoe/${shoe.slug}`} className="block h-full">
         <motion.div
           whileHover={{ y: -8 }}
-          className={`group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:border-white/20 ${
+          className={`group relative h-full flex flex-col bg-white/5 border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:border-white/20 ${
             shoe.brandId === 'nike'
               ? 'hover:shadow-[0_0_40px_rgba(250,84,0,0.15)]'
               : shoe.brandId === 'adidas'
@@ -65,24 +66,24 @@ export default function ShoeCard({ shoe, index = 0 }: ShoeCardProps) {
           </button>
 
           {/* Image */}
-          <div className="relative aspect-[4/3] bg-gradient-to-br from-white/5 to-transparent">
-            <div className="absolute inset-0 flex items-center justify-center p-8">
+          <div className="relative aspect-[4/3] bg-gradient-to-br from-white/5 to-transparent overflow-hidden">
+            <div className="absolute inset-0 flex items-center justify-center p-6 md:p-8">
               <div className="relative w-full h-full">
                 <Image
                   src={shoe.images[0]?.url || '/images/placeholder-shoe.png'}
                   alt={shoe.name}
                   fill
-                  className="object-contain transition-transform duration-500 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-contain transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
             </div>
           </div>
 
           {/* Content */}
-          <div className="p-6">
+          <div className="flex-1 flex flex-col p-5 md:p-6">
             {/* Badges */}
-            <div className="flex flex-wrap gap-2 mb-3">
+            <div className="flex flex-wrap items-center gap-1.5 md:gap-2 mb-3">
               <Badge variant={shoe.brandId} size="sm">
                 {getBrandLabel(shoe.brandId)}
               </Badge>
@@ -92,23 +93,23 @@ export default function ShoeCard({ shoe, index = 0 }: ShoeCardProps) {
             </div>
 
             {/* Title */}
-            <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-gray-100">
+            <h3 className="text-base md:text-lg font-semibold text-white mb-1 group-hover:text-gray-100 leading-snug line-clamp-1">
               {shoe.nameKo}
             </h3>
-            <p className="text-sm text-gray-400 mb-3">{shoe.name}</p>
+            <p className="text-xs md:text-sm text-gray-400 mb-2 md:mb-3 truncate">{shoe.name}</p>
 
             {/* Tagline */}
-            <p className="text-sm text-gray-500 line-clamp-2 mb-4">
+            <p className="text-xs md:text-sm text-gray-500 line-clamp-2 mb-3 md:mb-4 leading-relaxed min-h-[2.5rem] md:min-h-[2.75rem]">
               {shoe.tagline}
             </p>
 
-            {/* Specs & Price */}
-            <div className="flex items-end justify-between">
-              <div className="flex gap-4 text-xs text-gray-500">
+            {/* Specs & Price - pushed to bottom */}
+            <div className="mt-auto flex items-end justify-between gap-2 pt-2">
+              <div className="flex gap-3 md:gap-4 text-[10px] md:text-xs text-gray-500">
                 <span>{shoe.specs.weight}g</span>
                 <span>{shoe.specs.drop}mm 드롭</span>
               </div>
-              <span className="text-lg font-bold text-white">
+              <span className="text-base md:text-lg font-bold text-white whitespace-nowrap">
                 {formatPrice(shoe.specs.priceKRW)}
               </span>
             </div>

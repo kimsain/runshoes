@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import TextSplit from '@/components/animations/TextSplit';
@@ -9,6 +10,27 @@ import MagneticButton from '@/components/animations/MagneticButton';
 import ShoeCard from '@/components/shoes/ShoeCard';
 import { useShoes } from '@/hooks/useShoes';
 import categories from '@/data/categories.json';
+
+// Animation configurations extracted as constants
+const blobAnimations = {
+  first: {
+    animate: { scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] },
+    transition: { duration: 8, repeat: Infinity, ease: 'easeInOut' as const },
+  },
+  second: {
+    animate: { scale: [1.2, 1, 1.2], opacity: [0.3, 0.5, 0.3] },
+    transition: { duration: 8, repeat: Infinity, ease: 'easeInOut' as const, delay: 2 },
+  },
+  third: {
+    animate: { scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] },
+    transition: { duration: 8, repeat: Infinity, ease: 'easeInOut' as const, delay: 4 },
+  },
+};
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+};
 
 const brands = [
   {
@@ -41,127 +63,124 @@ export default function HomePage() {
   const allShoes = useShoes();
   const featuredShoes = allShoes.slice(0, 6);
 
+  // Memoize brand glow styles to prevent recreation on each render
+  const brandGlowStyles = useMemo(() =>
+    brands.reduce((acc, brand) => {
+      acc[brand.id] = { boxShadow: `inset 0 0 100px ${brand.color}40` };
+      return acc;
+    }, {} as Record<string, React.CSSProperties>),
+  []);
+
+  // Memoize category background styles
+  const categoryBgStyles = useMemo(() =>
+    categories.main.reduce((acc, category) => {
+      acc[category.id] = { backgroundColor: `${category.color}20` };
+      return acc;
+    }, {} as Record<string, React.CSSProperties>),
+  []);
+
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-black">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center">
+      <section className="relative min-h-screen flex flex-col">
         {/* Animated Background */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden z-0" aria-hidden="true">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
           <motion.div
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.5, 0.3],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-            className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl"
+            animate={blobAnimations.first.animate}
+            transition={blobAnimations.first.transition}
+            className="absolute top-1/4 left-1/4 w-64 md:w-96 h-64 md:h-96 bg-orange-500/20 rounded-full blur-3xl"
           />
           <motion.div
-            animate={{
-              scale: [1.2, 1, 1.2],
-              opacity: [0.3, 0.5, 0.3],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: 2,
-            }}
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl"
+            animate={blobAnimations.second.animate}
+            transition={blobAnimations.second.transition}
+            className="absolute bottom-1/4 right-1/4 w-64 md:w-96 h-64 md:h-96 bg-blue-600/20 rounded-full blur-3xl"
           />
           <motion.div
-            animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.2, 0.4, 0.2],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: 4,
-            }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-500/10 rounded-full blur-3xl"
+            animate={blobAnimations.third.animate}
+            transition={blobAnimations.third.transition}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 md:w-[600px] h-80 md:h-[600px] bg-red-500/10 rounded-full blur-3xl"
           />
         </div>
 
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-6"
-          >
-            <span className="inline-block px-4 py-2 bg-white/10 rounded-full text-sm text-gray-300">
-              Nike · Adidas · Asics
-            </span>
-          </motion.div>
-
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
-            <TextSplit
-              text="나에게 맞는"
-              className="text-white block mb-2"
-              delay={0.2}
-            />
-            <TextSplit
-              text="러닝화를 찾다"
-              className="gradient-text block"
-              delay={0.4}
-            />
-          </h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-            className="text-xl text-gray-400 max-w-2xl mx-auto mb-12"
-          >
-            데일리 트레이너부터 레이싱화까지,
-            <br />
-            당신의 러닝 스타일에 맞는 완벽한 러닝화를 추천해드립니다.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <MagneticButton className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-colors">
-              <Link href="/recommend">러닝화 추천받기</Link>
-            </MagneticButton>
-            <MagneticButton className="px-8 py-4 border border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-colors">
-              <Link href="/brands/nike">둘러보기</Link>
-            </MagneticButton>
-          </motion.div>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5 }}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2"
-          >
+        {/* Content - Centered */}
+        <div className="relative z-10 flex-1 flex items-center justify-center pt-24 pb-20">
+          <div className="max-w-7xl mx-auto px-6 text-center">
             <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="flex flex-col items-center gap-2 text-gray-500"
+              {...fadeInUp}
+              transition={{ duration: 0.6 }}
+              className="mb-6"
             >
-              <span className="text-sm">Scroll</span>
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
+              <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm text-gray-300 border border-white/5">
+                Nike · Adidas · Asics
+              </span>
             </motion.div>
-          </motion.div>
+
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+              <TextSplit
+                text="나에게 맞는"
+                className="text-white block mb-2"
+                delay={0.2}
+              />
+              <TextSplit
+                text="러닝화를 찾다"
+                className="gradient-text block"
+                delay={0.4}
+              />
+            </h1>
+
+            <motion.p
+              {...fadeInUp}
+              transition={{ delay: 0.8, duration: 0.6 }}
+              className="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed"
+            >
+              데일리 트레이너부터 레이싱화까지,
+              <br className="hidden sm:block" />
+              <span className="sm:hidden"> </span>
+              당신의 러닝 스타일에 맞는 완벽한 러닝화를 추천해드립니다.
+            </motion.p>
+
+            <motion.div
+              {...fadeInUp}
+              transition={{ delay: 1, duration: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            >
+              <Link href="/recommend" className="w-full sm:w-auto">
+                <MagneticButton className="w-full sm:w-auto px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-colors">
+                  러닝화 추천받기
+                </MagneticButton>
+              </Link>
+              <Link href="/brands/nike" className="w-full sm:w-auto">
+                <MagneticButton className="w-full sm:w-auto px-8 py-4 border border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-colors">
+                  둘러보기
+                </MagneticButton>
+              </Link>
+            </motion.div>
+          </div>
         </div>
+
+        {/* Scroll Indicator - Fixed at bottom of section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5 }}
+          className="relative z-10 pb-8 flex justify-center"
+        >
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+            className="flex flex-col items-center gap-2 text-gray-500"
+          >
+            <span className="text-xs uppercase tracking-widest">Scroll</span>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Brand Cards Section */}
-      <section className="py-32 bg-black">
+      <section className="relative z-10 py-32 bg-black">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-4">
@@ -191,9 +210,7 @@ export default function HomePage() {
                       initial={{ opacity: 0 }}
                       whileHover={{ opacity: 1 }}
                       className="absolute inset-0"
-                      style={{
-                        boxShadow: `inset 0 0 100px ${brand.color}40`,
-                      }}
+                      style={brandGlowStyles[brand.id]}
                     />
 
                     {/* Content */}
@@ -222,7 +239,7 @@ export default function HomePage() {
       </section>
 
       {/* Categories Section */}
-      <section className="py-32 bg-gradient-to-b from-black to-gray-900">
+      <section className="relative z-10 py-32 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-4">
@@ -243,7 +260,7 @@ export default function HomePage() {
                   >
                     <div
                       className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6"
-                      style={{ backgroundColor: `${category.color}20` }}
+                      style={categoryBgStyles[category.id]}
                     >
                       {category.icon}
                     </div>
@@ -275,7 +292,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Shoes */}
-      <section className="py-32 bg-gray-900">
+      <section className="relative z-10 py-32 bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <div className="flex items-end justify-between mb-12">
@@ -306,7 +323,7 @@ export default function HomePage() {
       </section>
 
       {/* Infinite Marquee */}
-      <section className="py-16 bg-black border-y border-white/10">
+      <section className="relative z-10 py-16 bg-black border-y border-white/10">
         <InfiniteMarquee speed={40}>
           <div className="flex items-center gap-16 px-8">
             {['Nike', 'Adidas', 'Asics', 'Running', 'Marathon', 'Racing', 'Daily', 'Speed'].map(
@@ -324,7 +341,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-gradient-to-b from-black to-gray-900">
+      <section className="relative z-10 py-32 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

@@ -13,7 +13,7 @@ export default function ProgressBar({ currentStep, totalSteps }: ProgressBarProp
   return (
     <div className="relative">
       {/* Background */}
-      <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+      <div className="h-1.5 md:h-2 bg-white/10 rounded-full overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: `${progress}%` }}
@@ -23,11 +23,11 @@ export default function ProgressBar({ currentStep, totalSteps }: ProgressBarProp
       </div>
 
       {/* Step indicators */}
-      <div className="flex justify-between mt-4">
+      <div className="flex justify-between mt-3 md:mt-4">
         {Array.from({ length: totalSteps }).map((_, index) => (
           <div
             key={index}
-            className={`flex items-center justify-center w-8 h-8 rounded-full text-sm font-medium transition-all ${
+            className={`flex items-center justify-center w-6 h-6 md:w-8 md:h-8 rounded-full text-xs md:text-sm font-medium transition-all ${
               index < currentStep
                 ? 'bg-white text-black'
                 : index === currentStep
@@ -36,7 +36,7 @@ export default function ProgressBar({ currentStep, totalSteps }: ProgressBarProp
             }`}
           >
             {index < currentStep ? (
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
               </svg>
             ) : (

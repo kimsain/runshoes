@@ -2,6 +2,7 @@
 
 import { useRef, ReactNode } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -10,15 +11,17 @@ interface ScrollRevealProps {
   direction?: 'up' | 'down' | 'left' | 'right' | 'none';
   duration?: number;
   once?: boolean;
+  as?: 'div' | 'section' | 'article' | 'span';
 }
 
 export default function ScrollReveal({
   children,
-  className = '',
+  className,
   delay = 0,
   direction = 'up',
   duration = 0.6,
   once = true,
+  as = 'div',
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once, margin: '-100px' });
@@ -55,8 +58,10 @@ export default function ScrollReveal({
     }
   };
 
+  const MotionComponent = motion[as] as typeof motion.div;
+
   return (
-    <motion.div
+    <MotionComponent
       ref={ref}
       initial={getInitialPosition()}
       animate={isInView ? getAnimatePosition() : getInitialPosition()}
@@ -65,9 +70,9 @@ export default function ScrollReveal({
         delay,
         ease: [0.25, 0.4, 0.25, 1],
       }}
-      className={className}
+      className={cn(className)}
     >
       {children}
-    </motion.div>
+    </MotionComponent>
   );
 }

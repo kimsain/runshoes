@@ -2,20 +2,25 @@
 
 import { ReactNode, useRef } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 interface CardProps {
   children: ReactNode;
   className?: string;
   tilt?: boolean;
   glow?: 'nike' | 'adidas' | 'asics' | 'none';
+  padding?: 'none' | 'sm' | 'md' | 'lg';
+  radius?: 'sm' | 'md' | 'lg' | 'xl' | '2xl';
   onClick?: () => void;
 }
 
 export default function Card({
   children,
-  className = '',
+  className,
   tilt = false,
   glow = 'none',
+  padding = 'none',
+  radius = '2xl',
   onClick,
 }: CardProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -57,6 +62,21 @@ export default function Card({
     none: '',
   };
 
+  const paddingStyles = {
+    none: '',
+    sm: 'p-3',
+    md: 'p-4',
+    lg: 'p-6',
+  };
+
+  const radiusStyles = {
+    sm: 'rounded-sm',
+    md: 'rounded-md',
+    lg: 'rounded-lg',
+    xl: 'rounded-xl',
+    '2xl': 'rounded-2xl',
+  };
+
   return (
     <motion.div
       ref={ref}
@@ -72,7 +92,14 @@ export default function Card({
             }
           : {}
       }
-      className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl transition-shadow duration-300 ${glowStyles[glow]} ${className}`}
+      className={cn(
+        'bg-white/5 backdrop-blur-sm border border-white/10 transition-shadow duration-300',
+        radiusStyles[radius],
+        paddingStyles[padding],
+        glowStyles[glow],
+        onClick && 'cursor-pointer',
+        className
+      )}
     >
       <div style={tilt ? { transform: 'translateZ(50px)' } : {}}>
         {children}

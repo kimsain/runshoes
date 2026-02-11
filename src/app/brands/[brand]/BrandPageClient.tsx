@@ -33,18 +33,18 @@ export default function BrandPageClient({ brand, shoes }: BrandPageClientProps) 
     : shoes;
 
   return (
-    <div className="min-h-screen bg-black pt-24">
+    <div className="min-h-screen bg-black pt-24 pb-20">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         {/* Background Glow */}
         <div
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 z-0 opacity-20"
           style={{
             background: `radial-gradient(circle at 50% 50%, ${brand.color}40, transparent 70%)`,
           }}
         />
 
-        <div className="relative max-w-7xl mx-auto px-6">
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

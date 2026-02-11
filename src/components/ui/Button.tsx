@@ -3,6 +3,7 @@
 import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
 interface ButtonProps {
   children: ReactNode;
@@ -13,6 +14,7 @@ interface ButtonProps {
   disabled?: boolean;
   className?: string;
   icon?: ReactNode;
+  fullWidth?: boolean;
 }
 
 export default function Button({
@@ -22,11 +24,12 @@ export default function Button({
   href,
   onClick,
   disabled = false,
-  className = '',
+  className,
   icon,
+  fullWidth = false,
 }: ButtonProps) {
   const baseStyles =
-    'inline-flex items-center justify-center gap-2 font-medium transition-all duration-300 rounded-full';
+    'inline-flex items-center justify-center gap-2 font-medium transition-all duration-300 rounded-full whitespace-nowrap';
 
   const variants = {
     primary:
@@ -40,14 +43,19 @@ export default function Button({
   };
 
   const sizes = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg',
+    sm: 'h-8 px-4 text-sm',
+    md: 'h-10 px-6 text-base',
+    lg: 'h-12 px-8 text-lg',
   };
 
-  const styles = `${baseStyles} ${variants[variant]} ${sizes[size]} ${
-    disabled ? 'opacity-50 cursor-not-allowed' : ''
-  } ${className}`;
+  const styles = cn(
+    baseStyles,
+    variants[variant],
+    sizes[size],
+    disabled && 'opacity-50 cursor-not-allowed pointer-events-none',
+    fullWidth && 'w-full',
+    className
+  );
 
   const content = (
     <>

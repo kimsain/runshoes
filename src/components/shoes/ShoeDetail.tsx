@@ -23,7 +23,7 @@ export default function ShoeDetail({ shoe }: ShoeDetailProps) {
     <div className="pt-24 pb-20">
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -69,13 +69,13 @@ export default function ShoeDetail({ shoe }: ShoeDetailProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 break-words">
               {shoe.nameKo}
             </h1>
-            <p className="text-xl text-gray-400 mb-4">{shoe.name}</p>
+            <p className="text-lg md:text-xl text-gray-400 mb-4 break-words">{shoe.name}</p>
 
             {/* Tagline */}
-            <p className="text-xl text-gray-300 mb-6">{shoe.tagline}</p>
+            <p className="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">{shoe.tagline}</p>
 
             {/* Price */}
             <div className="mb-8">
@@ -85,23 +85,23 @@ export default function ShoeDetail({ shoe }: ShoeDetailProps) {
             </div>
 
             {/* Quick Specs */}
-            <div className="grid grid-cols-3 gap-4 mb-8">
-              <div className="bg-white/5 rounded-xl p-4 text-center">
-                <p className="text-2xl font-bold text-white">{shoe.specs.weight}g</p>
-                <p className="text-sm text-gray-500">무게</p>
+            <div className="grid grid-cols-3 gap-3 md:gap-4 mb-8">
+              <div className="bg-white/5 rounded-xl p-3 md:p-4 text-center">
+                <p className="text-xl md:text-2xl font-bold text-white">{shoe.specs.weight}g</p>
+                <p className="text-xs md:text-sm text-gray-500">무게</p>
               </div>
-              <div className="bg-white/5 rounded-xl p-4 text-center">
-                <p className="text-2xl font-bold text-white">{shoe.specs.drop}mm</p>
-                <p className="text-sm text-gray-500">드롭</p>
+              <div className="bg-white/5 rounded-xl p-3 md:p-4 text-center">
+                <p className="text-xl md:text-2xl font-bold text-white">{shoe.specs.drop}mm</p>
+                <p className="text-xs md:text-sm text-gray-500">드롭</p>
               </div>
-              <div className="bg-white/5 rounded-xl p-4 text-center">
-                <p className="text-2xl font-bold text-white">{shoe.specs.heelStack}mm</p>
-                <p className="text-sm text-gray-500">힐 스택</p>
+              <div className="bg-white/5 rounded-xl p-3 md:p-4 text-center">
+                <p className="text-xl md:text-2xl font-bold text-white">{shoe.specs.heelStack}mm</p>
+                <p className="text-xs md:text-sm text-gray-500">힐 스택</p>
               </div>
             </div>
 
             {/* Actions */}
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
               <Button
                 variant={inCompare ? 'outline' : 'primary'}
                 onClick={() => addToCompare(shoe.id)}

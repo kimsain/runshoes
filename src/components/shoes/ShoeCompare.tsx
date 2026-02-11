@@ -74,11 +74,11 @@ export default function ShoeCompare({ shoes }: ShoeCompareProps) {
   return (
     <div className="space-y-12">
       {/* Shoes Overview */}
-      <div className={`grid gap-6 ${shoes.length === 1 ? 'grid-cols-1 max-w-md mx-auto' : shoes.length === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
+      <div className={`grid gap-4 md:gap-6 ${shoes.length === 1 ? 'grid-cols-1 max-w-md mx-auto' : shoes.length === 2 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}>
         {shoes.map((shoe) => (
           <div
             key={shoe.id}
-            className="relative bg-white/5 border border-white/10 rounded-2xl p-6"
+            className="relative bg-white/5 border border-white/10 rounded-2xl p-4 md:p-6 h-full flex flex-col"
           >
             {/* Remove button */}
             <button
@@ -103,28 +103,30 @@ export default function ShoeCompare({ shoes }: ShoeCompareProps) {
             </Link>
 
             {/* Info */}
-            <div className="flex flex-wrap gap-2 mb-2">
-              <Badge variant={shoe.brandId} size="sm">
-                {getBrandLabel(shoe.brandId)}
-              </Badge>
-              <Badge variant={shoe.mainCategory} size="sm">
-                {getSubCategoryLabel(shoe.subCategory)}
-              </Badge>
+            <div className="flex-1 flex flex-col">
+              <div className="flex flex-wrap items-center gap-1.5 md:gap-2 mb-2">
+                <Badge variant={shoe.brandId} size="sm">
+                  {getBrandLabel(shoe.brandId)}
+                </Badge>
+                <Badge variant={shoe.mainCategory} size="sm">
+                  {getSubCategoryLabel(shoe.subCategory)}
+                </Badge>
+              </div>
+              <h3 className="text-base md:text-lg font-bold text-white line-clamp-1">{shoe.nameKo}</h3>
+              <p className="text-xs md:text-sm text-gray-400 truncate">{shoe.name}</p>
+              <p className="text-lg md:text-xl font-bold text-white mt-auto pt-3">
+                {formatPrice(shoe.specs.priceKRW)}
+              </p>
             </div>
-            <h3 className="text-lg font-bold text-white">{shoe.nameKo}</h3>
-            <p className="text-sm text-gray-400">{shoe.name}</p>
-            <p className="text-xl font-bold text-white mt-3">
-              {formatPrice(shoe.specs.priceKRW)}
-            </p>
           </div>
         ))}
       </div>
 
       {/* Radar Chart */}
       {shoes.length > 1 && (
-        <div className="bg-white/5 rounded-3xl p-8">
-          <h3 className="text-xl font-bold text-white mb-6">성능 비교</h3>
-          <div className="h-96">
+        <div className="bg-white/5 rounded-3xl p-6 md:p-8">
+          <h3 className="text-lg md:text-xl font-bold text-white mb-4 md:mb-6">성능 비교</h3>
+          <div className="h-72 md:h-96">
             <ResponsiveContainer width="100%" height="100%">
               <RadarChart data={chartData} cx="50%" cy="50%" outerRadius="70%">
                 <PolarGrid stroke="#333" />
@@ -148,15 +150,15 @@ export default function ShoeCompare({ shoes }: ShoeCompareProps) {
       )}
 
       {/* Specs Comparison Table */}
-      <div className="bg-white/5 rounded-3xl p-8 overflow-x-auto">
-        <h3 className="text-xl font-bold text-white mb-6">스펙 비교</h3>
-        <table className="w-full">
+      <div className="bg-white/5 rounded-3xl p-4 md:p-8 overflow-x-auto">
+        <h3 className="text-lg md:text-xl font-bold text-white mb-4 md:mb-6">스펙 비교</h3>
+        <table className="w-full min-w-[400px]">
           <thead>
             <tr>
-              <th className="text-left py-3 px-4 text-gray-400 font-medium">항목</th>
+              <th className="text-left py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm text-gray-400 font-medium whitespace-nowrap">항목</th>
               {shoes.map((shoe) => (
-                <th key={shoe.id} className="text-center py-3 px-4 text-white font-medium">
-                  {shoe.nameKo}
+                <th key={shoe.id} className="text-center py-2 md:py-3 px-2 md:px-4 text-xs md:text-sm text-white font-medium">
+                  <span className="line-clamp-2">{shoe.nameKo}</span>
                 </th>
               ))}
             </tr>
@@ -164,9 +166,9 @@ export default function ShoeCompare({ shoes }: ShoeCompareProps) {
           <tbody>
             {specRows.map((row, index) => (
               <tr key={row.label} className={index % 2 === 0 ? 'bg-white/5' : ''}>
-                <td className="py-4 px-4 text-gray-400">{row.label}</td>
+                <td className="py-3 md:py-4 px-2 md:px-4 text-xs md:text-sm text-gray-400 whitespace-nowrap">{row.label}</td>
                 {shoes.map((shoe) => (
-                  <td key={shoe.id} className="py-4 px-4 text-center text-white font-medium">
+                  <td key={shoe.id} className="py-3 md:py-4 px-2 md:px-4 text-center text-xs md:text-sm text-white font-medium whitespace-nowrap">
                     {row.getValue(shoe)}
                   </td>
                 ))}
@@ -177,26 +179,26 @@ export default function ShoeCompare({ shoes }: ShoeCompareProps) {
       </div>
 
       {/* Pros/Cons Comparison */}
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-4 md:gap-6 md:grid-cols-2">
         {/* Pros */}
-        <div className="bg-gradient-to-br from-green-500/10 to-transparent border border-green-500/20 rounded-3xl p-8">
-          <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
-            <div className="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center">
-              <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="bg-gradient-to-br from-green-500/10 to-transparent border border-green-500/20 rounded-3xl p-5 md:p-8">
+          <h3 className="text-lg md:text-xl font-bold text-white mb-4 md:mb-6 flex items-center gap-2 md:gap-3">
+            <div className="w-7 h-7 md:w-8 md:h-8 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg className="w-3.5 h-3.5 md:w-4 md:h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
             장점 비교
           </h3>
-          <div className={`grid gap-6 ${shoes.length === 1 ? 'grid-cols-1' : shoes.length === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
+          <div className={`grid gap-4 md:gap-6 ${shoes.length === 1 ? 'grid-cols-1' : shoes.length === 2 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}>
             {shoes.map((shoe) => (
               <div key={shoe.id}>
-                <p className="text-sm font-medium text-green-400 mb-3">{shoe.nameKo}</p>
-                <ul className="space-y-2">
+                <p className="text-xs md:text-sm font-medium text-green-400 mb-2 md:mb-3 line-clamp-1">{shoe.nameKo}</p>
+                <ul className="space-y-1.5 md:space-y-2">
                   {shoe.proscons.pros.map((pro, idx) => (
-                    <li key={idx} className="text-sm text-gray-300 flex items-start gap-2">
-                      <span className="text-green-400">+</span>
-                      {pro}
+                    <li key={idx} className="text-xs md:text-sm text-gray-300 flex items-start gap-1.5 md:gap-2">
+                      <span className="text-green-400 flex-shrink-0">+</span>
+                      <span className="line-clamp-2">{pro}</span>
                     </li>
                   ))}
                 </ul>
@@ -206,24 +208,24 @@ export default function ShoeCompare({ shoes }: ShoeCompareProps) {
         </div>
 
         {/* Cons */}
-        <div className="bg-gradient-to-br from-red-500/10 to-transparent border border-red-500/20 rounded-3xl p-8">
-          <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
-            <div className="w-8 h-8 bg-red-500/20 rounded-full flex items-center justify-center">
-              <svg className="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="bg-gradient-to-br from-red-500/10 to-transparent border border-red-500/20 rounded-3xl p-5 md:p-8">
+          <h3 className="text-lg md:text-xl font-bold text-white mb-4 md:mb-6 flex items-center gap-2 md:gap-3">
+            <div className="w-7 h-7 md:w-8 md:h-8 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg className="w-3.5 h-3.5 md:w-4 md:h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </div>
             단점 비교
           </h3>
-          <div className={`grid gap-6 ${shoes.length === 1 ? 'grid-cols-1' : shoes.length === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
+          <div className={`grid gap-4 md:gap-6 ${shoes.length === 1 ? 'grid-cols-1' : shoes.length === 2 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}>
             {shoes.map((shoe) => (
               <div key={shoe.id}>
-                <p className="text-sm font-medium text-red-400 mb-3">{shoe.nameKo}</p>
-                <ul className="space-y-2">
+                <p className="text-xs md:text-sm font-medium text-red-400 mb-2 md:mb-3 line-clamp-1">{shoe.nameKo}</p>
+                <ul className="space-y-1.5 md:space-y-2">
                   {shoe.proscons.cons.map((con, idx) => (
-                    <li key={idx} className="text-sm text-gray-300 flex items-start gap-2">
-                      <span className="text-red-400">-</span>
-                      {con}
+                    <li key={idx} className="text-xs md:text-sm text-gray-300 flex items-start gap-1.5 md:gap-2">
+                      <span className="text-red-400 flex-shrink-0">-</span>
+                      <span className="line-clamp-2">{con}</span>
                     </li>
                   ))}
                 </ul>

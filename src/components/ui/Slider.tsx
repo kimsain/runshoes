@@ -2,16 +2,32 @@
 
 import { useState, useRef, ReactNode } from 'react';
 import { motion, useMotionValue } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 interface SliderProps {
   children: ReactNode[];
   className?: string;
+  showDots?: boolean;
+  showArrows?: boolean;
+  gap?: 'sm' | 'md' | 'lg';
 }
 
-export default function Slider({ children, className = '' }: SliderProps) {
+export default function Slider({
+  children,
+  className,
+  showDots = true,
+  showArrows = true,
+  gap = 'md',
+}: SliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const constraintsRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
+
+  const gapStyles = {
+    sm: 'px-2',
+    md: 'px-4',
+    lg: 'px-6',
+  };
 
   const handleDragEnd = () => {
     const dragDistance = x.get();
@@ -24,8 +40,16 @@ export default function Slider({ children, className = '' }: SliderProps) {
     }
   };
 
+  const arrowButtonStyles = cn(
+    'absolute top-1/2 -translate-y-1/2',
+    'w-10 h-10 rounded-full',
+    'inline-flex items-center justify-center',
+    'bg-white/10 hover:bg-white/20',
+    'transition-colors duration-200'
+  );
+
   return (
-    <div className={`relative ${className}`}>
+    <div className={cn('relative', className)}>
       {/* Slider container */}
       <div ref={constraintsRef} className="overflow-hidden">
         <motion.div
@@ -38,7 +62,7 @@ export default function Slider({ children, className = '' }: SliderProps) {
           style={{ x }}
         >
           {children.map((child, index) => (
-            <div key={index} className="w-full flex-shrink-0 px-4">
+            <div key={index} className={cn('w-full flex-shrink-0', gapStyles[gap])}>
               {child}
             </div>
           ))}
@@ -46,25 +70,30 @@ export default function Slider({ children, className = '' }: SliderProps) {
       </div>
 
       {/* Navigation dots */}
-      <div className="flex justify-center gap-2 mt-6">
-        {children.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              currentIndex === index
-                ? 'w-6 bg-white'
-                : 'bg-white/30 hover:bg-white/50'
-            }`}
-          />
-        ))}
-      </div>
+      {showDots && children.length > 1 && (
+        <div className="flex justify-center gap-2 mt-6">
+          {children.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              aria-label={`Go to slide ${index + 1}`}
+              className={cn(
+                'h-2 rounded-full transition-all duration-200',
+                currentIndex === index
+                  ? 'w-6 bg-white'
+                  : 'w-2 bg-white/30 hover:bg-white/50'
+              )}
+            />
+          ))}
+        </div>
+      )}
 
       {/* Navigation arrows */}
-      {currentIndex > 0 && (
+      {showArrows && currentIndex > 0 && (
         <button
           onClick={() => setCurrentIndex(currentIndex - 1)}
-          className="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
+          aria-label="Previous slide"
+          className={cn(arrowButtonStyles, 'left-0')}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -72,10 +101,11 @@ export default function Slider({ children, className = '' }: SliderProps) {
         </button>
       )}
 
-      {currentIndex < children.length - 1 && (
+      {showArrows && currentIndex < children.length - 1 && (
         <button
           onClick={() => setCurrentIndex(currentIndex + 1)}
-          className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
+          aria-label="Next slide"
+          className={cn(arrowButtonStyles, 'right-0')}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

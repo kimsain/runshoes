@@ -48,29 +48,29 @@ export default function RecommendWizard() {
   const selectedAnswer = answers.find((a) => a.questionId === currentQuestion?.id)?.optionId;
 
   return (
-    <div className="min-h-screen bg-black pt-24 pb-20">
-      <div className="max-w-3xl mx-auto px-6">
+    <div className="min-h-screen bg-black pt-20 md:pt-24 pb-16 md:pb-20">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12"
+          className="text-center mb-8 md:mb-12"
         >
           {!isComplete ? (
             <>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4">
                 나에게 맞는 러닝화 찾기
               </h1>
-              <p className="text-gray-400 text-lg">
+              <p className="text-gray-400 text-base md:text-lg">
                 5가지 질문에 답하고 맞춤 추천을 받아보세요
               </p>
             </>
           ) : (
             <>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4">
                 추천 결과
               </h1>
-              <p className="text-gray-400 text-lg">
+              <p className="text-gray-400 text-base md:text-lg">
                 당신에게 가장 적합한 러닝화를 찾았습니다
               </p>
             </>
@@ -83,7 +83,7 @@ export default function RecommendWizard() {
         )}
 
         {/* Content */}
-        <div className="mt-12">
+        <div className="mt-8 md:mt-12">
           <AnimatePresence mode="wait">
             {!isComplete ? (
               <motion.div
@@ -110,11 +110,11 @@ export default function RecommendWizard() {
                 transition={{ duration: 0.5 }}
               >
                 {results && (
-                  <div className="space-y-8">
+                  <div className="space-y-6 md:space-y-8">
                     {/* Top Result */}
                     {results[0] && (
-                      <div className="mb-12">
-                        <p className="text-center text-gray-400 mb-4">최고의 추천</p>
+                      <div className="mb-8 md:mb-12">
+                        <p className="text-center text-sm md:text-base text-gray-400 mb-3 md:mb-4">최고의 추천</p>
                         <ResultCard
                           result={results[0]}
                           rank={1}
@@ -126,8 +126,8 @@ export default function RecommendWizard() {
                     {/* Other Results */}
                     {results.length > 1 && (
                       <div>
-                        <p className="text-gray-400 mb-6">다른 추천 러닝화</p>
-                        <div className="grid gap-4">
+                        <p className="text-sm md:text-base text-gray-400 mb-4 md:mb-6">다른 추천 러닝화</p>
+                        <div className="grid gap-3 md:gap-4">
                           {results.slice(1).map((result, index) => (
                             <ResultCard
                               key={result.shoe.id}
@@ -140,10 +140,10 @@ export default function RecommendWizard() {
                     )}
 
                     {/* Restart Button */}
-                    <div className="text-center pt-8">
+                    <div className="text-center pt-6 md:pt-8">
                       <button
                         onClick={handleRestart}
-                        className="px-8 py-4 border border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-colors"
+                        className="px-6 md:px-8 py-3 md:py-4 border border-white/30 text-white text-sm md:text-base font-medium rounded-full hover:bg-white/10 active:bg-white/20 transition-colors"
                       >
                         다시 추천받기
                       </button>

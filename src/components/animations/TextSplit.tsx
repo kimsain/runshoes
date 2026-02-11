@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useInView, Variants } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 interface TextSplitProps {
   text: string;
@@ -60,7 +61,7 @@ export default function TextSplit({
       variants={container}
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
-      className={`inline-block ${className}`}
+      className={cn('inline-block', className)}
       style={{ perspective: 1000 }}
     >
       {items.map((item, index) => (
